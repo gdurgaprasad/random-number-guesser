@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guesser</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Number Guesser</h2>
+      <div id="game">
+        <p id="hint">
+          Enter a number between
+          <span id="min-num"></span> and
+          <span id="max-num"></span>
+        </p>
+        <input
+          type="number"
+          id="guess-input"
+          placeholder="Enter your guess"
+          autofocus
+        />
+        <input type="submit" id="guess-submit-btn" value="submit" />
+        <p class="message"></p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
