@@ -19,7 +19,7 @@ function getWinningNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-guessSubmit.addEventListener("click", function (e) {
+guessSubmit.addEventListener("click", function(e) {
   const guess = Number(guessInput.value);
 
   if (e.target.value === "submit") {
@@ -30,7 +30,7 @@ guessSubmit.addEventListener("click", function (e) {
 
     // WON CASE
     else if (guess === winningNumber) {
-      gameOver(true, `${winningNumber} is correct.YOU WON!`, "green");
+      gameOver(true, `YOU WON!.${winningNumber} is correct number`, "green");
     }
 
     //LOSE CASE
@@ -41,7 +41,7 @@ guessSubmit.addEventListener("click", function (e) {
       if (chancesLeft > 0) {
         guessInput.value = "";
         setMessage(
-          `${guess}  is not correct. you still have ${chancesLeft} attempts left.`,
+          `${guess} is not correct. you have ${chancesLeft} attempts left.`,
           "red"
         );
       }
@@ -50,7 +50,7 @@ guessSubmit.addEventListener("click", function (e) {
       else if (chancesLeft === 0) {
         gameOver(
           false,
-          `GAME OVER.YOU LOST.${winningNumber} is the correct number.`
+          `GAME OVER.YOU LOST.${winningNumber} IS THE CORRECT NUMBER`
         );
       }
     }
@@ -71,7 +71,7 @@ function gameOver(won, msg) {
 }
 
 function playAgain() {
-  location.reload();
+  window.location.reload();
   guessSubmit.value = "submit";
   guessInput.disabled = false;
   message.textContent = "";
